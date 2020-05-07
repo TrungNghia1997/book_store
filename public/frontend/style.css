@@ -753,7 +753,7 @@ body {
 }
 .menu-area ul li:hover a:before,
 .menu-area ul li.active a:before {
-    width: 220%;
+    width: 100%;
     opacity: 1;
 }
 .menu-area ul li a:after,
@@ -6327,4 +6327,43 @@ p.lost-password a:hover {
 }
 .quickview-active:hover .owl-nav button {
     opacity: 1;
+}
+.nomal-text a {
+    font-weight: normal!important;
+    text-transform: none!important;
+}
+.auth-login {
+    width: 100%;
+    padding: 10px 0;
+    background: gainsboro;
+    text-align: right;
+}
+.auth-login a {
+    color: #444444;
+}
+.auth-login a:hover {
+    color: #f07c29;
+}
+.mean-container .mean-nav ul li {
+    border-top: 1px solid #333 !important;
+}
+.mean-container .mean-nav ul li, .mean-container .mean-nav ul li a {
+    background: #0c1923;
+    color: white;
+}
+.padding-top-0 {
+    padding-top: 0!important;
+}
+.uppercase {
+    text-transform: uppercase!important;
+}
+.mean-container .mean-nav ul li a:hover {
+    background: #262626;
+}
+
+
+@media only screen and (max-width: 991px) {
+    .auth-login {
+        display: none;
+    }
 }

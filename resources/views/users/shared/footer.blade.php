@@ -17,19 +17,15 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 text-right">
                         <div class="section-title-3">
                             <h3>Stay Connected</h3>
                         </div>
                         <div class="link-follow">
                             <ul>
-                                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
                                 <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
                                 <li><a href="#"><i class="fa fa-facebook"></i></a></li>
                                 <li><a href="#"><i class="fa fa-youtube"></i></a></li>
-                                <li><a href="#"><i class="fa fa-flickr"></i></a></li>
-                                <li class="hidden-sm"><a href="#"><i class="fa fa-vimeo"></i></a></li>
-                                <li class="hidden-sm"><a href="#"><i class="fa fa-instagram"></i></a></li>
                             </ul>
                         </div>
                     </div>

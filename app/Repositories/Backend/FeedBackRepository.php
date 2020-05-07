@@ -3,7 +3,7 @@
 namespace App\Repositories\Backend;
 
 use JasonGuru\LaravelMakeRepository\Repository\BaseRepository;
-use App\Models\FeedBack;
+use App\Models\Feedback;
 
 /**
  * Class FeedBackRepository.

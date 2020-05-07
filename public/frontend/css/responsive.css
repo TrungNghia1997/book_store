@@ -454,8 +454,6 @@
         font-size: 18px;
     }
     .mobile-menu-area .mean-nav ul#nav {
-        height: 252px;
-        margin-top: 10px;
         overflow-y: auto;
     }
     .mean-container a.meanmenu-reveal {
@@ -925,7 +923,7 @@
     .header-mid-area .my-cart {
         display: flex;
         float: none;
-        justify-content: center;
+        justify-content: flex-end;
         margin-top: 0;
     }
     .mini-cart-sub {
@@ -1278,8 +1276,6 @@
         max-width: 100%;
     }
     .mobile-menu-area .mean-nav ul#nav {
-        height: 252px;
-        margin-top: 10px;
         overflow-y: auto;
     }
     .home-3 .mobile-menu-area .mean-nav ul#nav {
