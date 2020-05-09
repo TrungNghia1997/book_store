@@ -54,7 +54,7 @@
                     <div class="menu-area">
                         <nav>
                             <ul>
-                                <li class="active"><a href="{{ asset('/') }}">Trang chủ</a>
+                                <li class="{{ Request::is('/')? 'active': '' }}"><a href="{{ asset('/') }}">Trang chủ</a>
                                 </li>
 
                                 @foreach($categories as $item)
@@ -79,10 +79,10 @@
                                 @endif
                                 @endforeach
 
-                                <li><a href="{{ url('/san_pham') }}">Sản phẩm</a></li>
-                                <li><a href="{{url('/sale')}}">sales off</a></li>
-                                <li><a href="{{ url('/lien_he') }}">Liên hệ</a></li>
-                                <li><a href="{{ url('/gioi_thieu') }}">Giới thiệu chúng tôi</a></li>
+                                <li class="{{ Request::is('san_pham')? 'active': '' }}"><a href="{{ url('/san_pham') }}">Sản phẩm</a></li>
+                                <li class="{{ Request::is('sale')? 'active': '' }}"><a href="{{url('/sale')}}">sales off</a></li>
+                                <li class="{{ Request::is('lien_he')? 'active': '' }}"><a href="{{ url('/lien_he') }}">Liên hệ</a></li>
+                                <li class="{{ Request::is('gioi_thieu')? 'active': '' }}"><a href="{{ url('/gioi_thieu') }}">Giới thiệu chúng tôi</a></li>
                             </ul>
                         </nav>
                     </div>

@@ -7,7 +7,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Admin |  @yield('title')</title>
-    <link rel="icon" type="image/ico" href="{{asset('/assets_admin/images/logo.png')}}" />
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.png">
     <meta name="description" content="Ela Admin - HTML5 Admin Template">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 

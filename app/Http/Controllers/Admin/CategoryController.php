@@ -99,7 +99,7 @@ class CategoryController extends Controller
         $categories = Category::all()->toarray();
         if( getLevel($categories, $r->idParent, 1)<4){
 
-            $cate = category::findOrFail($id);
+            $cate = Category::findOrFail($id);
             $cate->name=$r->name;
             $cate->slug=str_slug($r->name);
             $cate->parent=$r->idParent;

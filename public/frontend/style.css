@@ -4,10 +4,10 @@
     Version: 1.0
 
 -----------------------------------------------------------------------------------
-    
+
     CSS INDEX
     ===================
-	
+
     1. Template Default CSS (body, link color, section etc)
 	2. Header-area
 		2.1 Header top area
@@ -43,7 +43,7 @@
 	27. Checkout
 	28. Wishlist
 	29. 404 page
-	
+
 
 -----------------------------------------------------------------------------------*/
 
@@ -57,6 +57,9 @@
 html,
 body {
     height: 100%;
+}
+.copy-right {
+    line-height: 58px;
 }
 .floatleft {
     float: left
@@ -1742,7 +1745,7 @@ body {
     width: 40px;
     z-index: 1;
 }
-.product-active-2.owl-carousel .owl-nav button i , 
+.product-active-2.owl-carousel .owl-nav button i ,
 .product-active-3.owl-carousel .owl-nav button i {
     position: relative;
     top: -3px;
@@ -1751,20 +1754,20 @@ body {
     background: #f07c29 none repeat scroll 0 0;
     color: #fff;
 }
-.product-active-2.owl-carousel .owl-nav button.owl-next , 
+.product-active-2.owl-carousel .owl-nav button.owl-next ,
 .product-active-3.owl-carousel .owl-nav button.owl-next {
     left: auto;
     right: 40px;
 }
-.product-active-2.owl-carousel:hover .owl-nav button.owl-next , 
+.product-active-2.owl-carousel:hover .owl-nav button.owl-next ,
 .product-active-3.owl-carousel:hover .owl-nav button.owl-next {
     right: 0px;
 }
-.product-active-2.owl-carousel:hover .owl-nav button.owl-prev , 
+.product-active-2.owl-carousel:hover .owl-nav button.owl-prev ,
 .product-active-3.owl-carousel:hover .owl-nav button.owl-prev {
     left: 0px;
 }
-.product-active-2.owl-carousel:hover .owl-nav button , 
+.product-active-2.owl-carousel:hover .owl-nav button ,
 .product-active-3.owl-carousel:hover .owl-nav button {
     opacity: 1;
     visibility: visible;
@@ -2252,12 +2255,12 @@ a#scrollUp {
     color: #fff;
     display: none;
     font-size: 20px;
-    height: 40px;
-    line-height: 32px;
+    height: 50px;
+    line-height: 40px;
     position: fixed;
     right: 12px;
     text-align: center;
-    width: 40px;
+    width: 50px;
     z-index: 9999;
     transition: .3s;
 }
@@ -2378,7 +2381,7 @@ a#scrollUp:hover {
     -moz-border-top-colors: none;
     -moz-user-select: none;
     background: white url("img/icon-img/select-2.png") no-repeat scroll 90% 50%;
-    border-color: -moz-use-text-color #e5e5e5 -moz-use-text-color -moz-use-text-color;
+    border-color: #e5e5e5;
     border-image: none;
     border-radius: 15px 0 0 15px;
     border-style: none solid none none;
@@ -2933,7 +2936,7 @@ a#scrollUp:hover {
 .home-4 .twitter-text a:hover {
     color: #232323;
 }
-.home-4 .product-active-2.owl-carousel .owl-nav button:hover , 
+.home-4 .product-active-2.owl-carousel .owl-nav button:hover ,
 .home-4 .product-active-3.owl-carousel .owl-nav button:hover {
     background: #00abe0 none repeat scroll 0 0;
     color: #fff;
@@ -3277,7 +3280,7 @@ nav.menu .cr-dropdown ul {
 .home-5 .slider-content a {
     background: #f07c29 none repeat scroll 0 0;
     border-radius: 4px;
-    color: fff;
+    color: #fff;
     display: inline-block;
     font-size: 14px;
     font-weight: 400;
@@ -4633,7 +4636,7 @@ nav.menu .cr-dropdown ul {
 .author-destils .author-right ul li a {
     font-size: 16px;
     color: #333;
-    transition.3s;
+    transition: .3s;
 }
 .author-destils .author-right ul li a:hover {
     color: #F07C29;
@@ -5517,7 +5520,7 @@ nav.menu .cr-dropdown ul {
 }
 .coupon p {
     font-size: 14px;
-    color: : #777;
+    color: #777;
     font-family: 'Rufina', serif;
     font-weight: 400;
     color: #333;
@@ -6360,10 +6363,18 @@ p.lost-password a:hover {
 .mean-container .mean-nav ul li a:hover {
     background: #262626;
 }
+.form-control {
+    height: 40px;
+}
 
 
 @media only screen and (max-width: 991px) {
     .auth-login {
         display: none;
+    }
+}
+@media only screen and (max-width: 768px) {
+    .footer .row>div {
+        text-align: center;
     }
 }

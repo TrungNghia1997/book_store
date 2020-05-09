@@ -13,7 +13,9 @@ class SearchController extends Controller
         $this->categoryRepository = new CategoryRepository();
         $this->productRepository = new ProductRepository();
     }
-    public function search() { 
+
+
+    public function search() {
 
         if($_GET['search']){
             $search = $_GET['search'];
