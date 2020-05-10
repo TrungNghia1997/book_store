@@ -3,10 +3,12 @@
     <div class="top-left">
         <div class="navbar-header">
             @foreach($option as $item)
-            <a class="navbar-brand" href="{{url('/')}}" style="font-family: 'Abril Fatface', cursive; font-size: 33px;"><img src="{{$item->logo}}" alt="logo" style="width: 55px; height: 55px; border-radius: 50%;"> BOOKS </a>
+            <a class="navbar-brand" href="{{url('/')}}" style="font-family: 'Abril Fatface', cursive; font-size: 33px;color:black;">
+                <img src="{{$item->logo}}" alt="logo" style="width: 110px; height: 55px; border-radius: 50%;">BOOKS
+            </a>
             @endforeach
             {{-- <a class="navbar-brand hidden" href="./"><img src="/assets_admin/images/logo2.png" alt="Logo"></a> --}}
-            <a id="menuToggle" class="menutoggle"><i class="fa fa-bars"></i></a>
+            <a id="menuToggle" class="menutoggle text-left"><i class="fa fa-bars" style="font-size: 30px;"></i></a>
         </div>
     </div>
     <div class="top-right">

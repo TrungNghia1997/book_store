@@ -23,7 +23,7 @@
                     <th>Giá</th>
                     <th>Sale</th>
                     <th>Trạng thái sản phẩm</th>
-                    <td style="width: 150px;">Lựa chọn</td>
+                    <td class="text-center" style="width: 200px;">Lựa chọn</td>
                 </tr>
                 @foreach($productRepository as $item)
                 <tr>
@@ -46,10 +46,10 @@
                         @if($item->status ==1) Còn hàng @endif
                         @if($item->status ==0) Hết hàng @endif
                     </td>
-                    <td>
-                        <a href="{{url('/')}}/admin/product/{{$item->id}}" title="Edit" style=" display: inline-block;"><span class="btn btn-success" style="font-size: 14px; padding: 3px 5px;">Xem</span></a>
-                        <a href="{{url('/')}}/admin/product/{{$item->id}}/edit" title="Edit" style=" display: inline-block;"><span class="btn btn-danger" style="font-size: 14px; padding: 3px 5px;">Sửa</span></a>
-                        <button type="button" class="btn btn-warning"style="font-size: 14px; padding: 3px 5px;" data-toggle="modal" data-target="#modal{{$item->id}}">
+                    <td class="text-center">
+                        <a href="{{url('/')}}/admin/product/{{$item->id}}" title="Detail" style=" display: inline-block;"><span class="btn btn-primary">Xem</span></a>
+                        <a href="{{url('/')}}/admin/product/{{$item->id}}/edit" title="Edit" style=" display: inline-block;"><span class="btn btn-warning">Sửa</span></a>
+                        <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#modal{{$item->id}}">
                         Xóa
                         </button>
                         <div class="modal fade" id="modal{{$item->id}}" tabindex="-1" role="dialog" aria-labelledby="modal{{$item->id}}Label" aria-hidden="true">

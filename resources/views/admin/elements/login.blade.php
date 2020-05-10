@@ -40,15 +40,15 @@
 
 				<form class="login100-form validate-form" method="post" action="{{url('/admin/login')}}">
 					@csrf
-					<div class="wrap-input100 validate-input m-b-26" data-validate="Username is required">
+					<div class="wrap-input100 validate-input m-b-26" data-validate="Vui lòng nhập email">
 						<span class="label-input100">Email</span>
-						<input class="input100" type="text" name="email" placeholder="Enter email">
+						<input class="input100" type="text" name="email" placeholder="Nhập email">
 						<span class="focus-input100"></span>
 					</div>
 
-					<div class="wrap-input100 validate-input m-b-18" data-validate = "Password is required">
+					<div class="wrap-input100 validate-input m-b-18" data-validate = "Vui lòng nhập mật khẩu">
 						<span class="label-input100">Mật khẩu</span>
-						<input class="input100" type="password" name="password" placeholder="Enter password">
+						<input class="input100" type="password" name="password" placeholder="Nhập mật khẩu">
 						<span class="focus-input100"></span>
 
 					</div>

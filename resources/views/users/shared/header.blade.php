@@ -57,29 +57,32 @@
                                 <li class="{{ Request::is('/')? 'active': '' }}"><a href="{{ asset('/') }}">Trang chủ</a>
                                 </li>
 
-                                @foreach($categories as $item)
-                                @if($item->parent == 0)
-                                <li><a href="{{url('/')}}/danh_muc/{{$item->id}}">{{$item->name}}<i class="fa fa-angle-down"></i></a>
-                                    <div class="mega-menu">
-                                        @foreach($categories as $item1)
-                                        @if($item1->parent == $item->id)
-                                        <span>
+                                <li class="{{ Request::is('san_pham')? 'active': '' }}">
+                                    <a href="{{ url('/san_pham') }}">Sản phẩm</a>
+                                    <ul class="hidden">
+                                        @foreach($categories as $item)
+                                            @if($item->parent == 0)
+                                                <li><a href="{{url('/')}}/danh_muc/{{$item->id}}">{{$item->name}}<i class="fa fa-angle-down"></i></a>
+                                                    <div class="mega-menu">
+                                                        @foreach($categories as $item1)
+                                                            @if($item1->parent == $item->id)
+                                                                <span>
                                             <a href="{{url('/')}}/danh_muc/{{$item1->id}}" class="title">{{$item1->name}}</a>
                                             @foreach($categories as $item2)
-                                            @if($item2->parent == $item1->id)
-                                            <a href="{{url('/')}}/danh_muc/{{$item1->id}}">{{$item2->name}}</a>
-                                            @endif
-                                            @endforeach
+                                                                        @if($item2->parent == $item1->id)
+                                                                            <a href="{{url('/')}}/danh_muc/{{$item1->id}}">{{$item2->name}}</a>
+                                                                        @endif
+                                                                    @endforeach
                                         </span>
-                                        @endif
+                                                            @endif
+                                                        @endforeach
+
+                                                    </div>
+                                                </li>
+                                            @endif
                                         @endforeach
-
-                                    </div>
+                                    </ul>
                                 </li>
-                                @endif
-                                @endforeach
-
-                                <li class="{{ Request::is('san_pham')? 'active': '' }}"><a href="{{ url('/san_pham') }}">Sản phẩm</a></li>
                                 <li class="{{ Request::is('sale')? 'active': '' }}"><a href="{{url('/sale')}}">sales off</a></li>
                                 <li class="{{ Request::is('lien_he')? 'active': '' }}"><a href="{{ url('/lien_he') }}">Liên hệ</a></li>
                                 <li class="{{ Request::is('gioi_thieu')? 'active': '' }}"><a href="{{ url('/gioi_thieu') }}">Giới thiệu chúng tôi</a></li>

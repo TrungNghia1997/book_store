@@ -36,7 +36,7 @@
                         <a href="{{url('/')}}/admin/user/{{$users->id}}/edit" title="">
                         <span class="badge bg-red" style="padding: 10px;">Edit</span>
                         </a>
-                        <button type="button" class="btn btn-warning"style="font-size: 14px; padding: 3px 5px;" data-toggle="modal" data-target="#modal{{$users->id}}">
+                        <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#modal{{$users->id}}">
                         Xóa
                         </button>
                         <div class="modal fade" id="modal{{$users->id}}" tabindex="-1" role="dialog" aria-labelledby="modal{{$users->id}}Label" aria-hidden="true">

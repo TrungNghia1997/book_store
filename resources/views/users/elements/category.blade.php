@@ -31,12 +31,12 @@
                         </div>
                         <div class="left-menu mb-30">
                             <ul>
-                                @foreach($categoryRepository as $item)
-                                    @foreach($categoryRepository as $item1)
-                                        @if($item1->parent == $item->id  && $item->parent == 0)
-                                            <li><a href="{{url('/')}}danh_muc/{{$item1->id}}">{{$item1->name}}</a></li>
-                                        @endif
-                                    @endforeach
+                                @foreach($categories as $item)
+                                    @if($item->parent == 0)
+                                        <li>
+                                            <a href="{{url('/')}}/danh_muc/{{$item->id}}">{{$item->name}}</a>
+                                        </li>
+                                    @endif
                                 @endforeach
                             </ul>
                         </div>

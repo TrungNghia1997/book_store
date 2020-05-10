@@ -30,7 +30,7 @@
                         </div>
                        <div class="form-group">
                             <label for="input-select-images" class="btn btn-danger">Logo</label>
-                            <input id="input-select-images" class="hidden" type="file" name="logo" required="">
+                            <input id="input-select-images" class="hidden" type="file" name="logo" required="" style="height: 56px;">
                             <div class="avatar-commic-preview">
                                 <img src="" id="profile-img-tag" width="200px"/>
                             </div>

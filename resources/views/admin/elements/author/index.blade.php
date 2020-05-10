@@ -16,11 +16,11 @@
             </ol>
             <table class="table table-striped">
                 <tr>
-                    <th style="width: 10px">#</th>
-                    <th>Tên tác giả</th>
-                    <th>Ảnh tác giả</th>
-                    <th>Mô tả</th>
-                    <td>Lựa chọn</td>
+                    <th width="20px">#</th>
+                    <th width="200px">Tên tác giả</th>
+                    <th width="170px">Ảnh tác giả</th>
+                    <th class="text-center">Mô tả</th>
+                    <td class="text-center" width="200px">Lựa chọn</td>
                 </tr>
                 @foreach($authorRepository as $item)
                 <tr>
@@ -30,9 +30,9 @@
                         <img src="{{$item->image_author}}" width="200" alt="">
                     </td>
                     <td>{!!$item->des_author!!}</td>
-                    <td>
-                        <a href="{{url('/')}}/admin/author/{{$item->id}}/edit" title="Edit" style=" display: inline-block;"><span class="btn btn-danger" style="font-size: 14px; padding: 3px 5px;">Sửa</span></a>
-                        <button type="button" class="btn btn-warning"style="font-size: 14px; padding: 3px 5px;" data-toggle="modal" data-target="#modal{{$item->id}}">
+                    <td class="text-center">
+                        <a href="{{url('/')}}/admin/author/{{$item->id}}/edit" title="Edit" style=" display: inline-block;"><span class="btn btn-warning">Sửa</span></a>
+                        <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#modal{{$item->id}}">
                         Xóa
                         </button>
                         <div class="modal fade" id="modal{{$item->id}}" tabindex="-1" role="dialog" aria-labelledby="modal{{$item->id}}Label" aria-hidden="true">

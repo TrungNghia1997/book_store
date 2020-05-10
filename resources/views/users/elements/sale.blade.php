@@ -31,12 +31,12 @@
                         </div>
                         <div class="left-menu mb-30">
                             <ul>
-                                @foreach($categoryRepository as $item)
-                                    @foreach($categoryRepository as $item1)
-                                        @if($item1->parent == $item->id  && $item->parent == 0)
-                                            <li><a href="{{url('/')}}/danh_muc/{{$item1->id}}">{{$item1->name}}</a></li>
-                                        @endif
-                                    @endforeach
+                                @foreach($categories as $item)
+                                    @if($item->parent == 0)
+                                        <li>
+                                            <a href="{{url('/')}}/danh_muc/{{$item->id}}">{{$item->name}}</a>
+                                        </li>
+                                    @endif
                                 @endforeach
                             </ul>
                         </div>
@@ -69,10 +69,10 @@
                                                 <div class="product-price">
                                                     <ul>
                                                         @if($random->sale > 0)
-                                                            <li>${{$random->price}}</li>
-                                                            <li class="old-price">${{($random->sale)*($random->price)/100}}</li>
+                                                            <li>{{number_format($random->price)}} đ</li>
+                                                            <li class="old-price">{{number_format(($random->sale)*($random->price)/100)}} đ</li>
                                                         @else
-                                                            <li>${{$random->price}}</li>
+                                                            <li>{{number_format($random->price)}} đ</li>
                                                         @endif
                                                     </ul>
                                                 </div>
@@ -127,10 +127,10 @@
                                                 <div class="product-price">
                                                     <ul>
                                                         @if($random->sale > 0)
-                                                            <li>${{$random->price}}</li>
-                                                            <li class="old-price">${{($random->sale)*($random->price)/100}}</li>
+                                                            <li>{{number_format($random->price)}} đ</li>
+                                                            <li class="old-price">{{number_format(($random->sale)*($random->price)/100)}} đ</li>
                                                         @else
-                                                            <li>${{$random->price}}</li>
+                                                            <li>{{number_format($random->price)}} đ</li>
                                                         @endif
                                                     </ul>
                                                 </div>
@@ -226,17 +226,17 @@
                                                 <div class="product-price">
                                                     <ul>
                                                         @if($product->sale > 0)
-                                                            <li>${{$product->price}}</li>
-                                                            <li class="old-price">${{($product->sale)*($product->price)/100}}</li>
+                                                            <li>{{number_format($product->price)}} đ</li>
+                                                            <li class="old-price">{{number_format(($product->sale)*($product->price)/100)}} đ</li>
                                                         @else
-                                                            <li>${{$product->price}}</li>
+                                                            <li>{{number_format($product->price)}} đ</li>
                                                         @endif
                                                     </ul>
                                                 </div>
                                             </div>
                                             <div class="product-link">
                                                 <div class="product-button">
-                                                    <a href="{{url('/')}}/cart/add/{{$product->id}}" title="Add to cart"><i class="fa fa-shopping-cart"></i>Thêm giỏ hàng</a>
+                                                    <a href="{{url('/')}}/cart/add/{{$product->id}}" title="Add to cart"><i class="fa fa-shopping-cart"></i>Thêm vào giỏ</a>
                                                 </div>
                                                 <div class="add-to-link">
                                                     <ul>
@@ -280,10 +280,10 @@
                                                     <div class="product-price">
                                                         <ul>
                                                             @if($product->sale > 0)
-                                                                <li>${{$product->price}}</li>
-                                                                <li class="old-price">${{($product->sale)*($product->price)/100}}</li>
+                                                                <li>{{number_format($product->price)}} đ</li>
+                                                                <li class="old-price">{{number_format(($product->sale)*($product->price)/100)}} đ</li>
                                                             @else
-                                                                <li>${{$product->price}}</li>
+                                                                <li>{{number_format($product->price)}} đ</li>
                                                             @endif
                                                         </ul>
                                                     </div>
@@ -291,7 +291,7 @@
                                                 </div>
                                                 <div class="product-link">
                                                     <div class="product-button">
-                                                        <a href="{{url('/')}}/cart/add/{{$product->id}}" title="Add to cart"><i class="fa fa-shopping-cart"></i>Thêm giỏ hàng</a>
+                                                        <a href="{{url('/')}}/cart/add/{{$product->id}}" title="Add to cart"><i class="fa fa-shopping-cart"></i>Thêm vào giỏ</a>
                                                     </div>
                                                     <div class="add-to-link">
                                                         <ul>
@@ -358,13 +358,13 @@
                                     <div class="modal-pro-content">
                                         <h3>{{$product->name}}</h3>
                                         <div class="price">
-                                            <span>${{$product->price}}</span>
+                                            <span>{{number_format($product->price)}} đ</span>
                                         </div>
                                         <p>{{$product->short_description}} ...</p>
                                         <br>
                                         <form action="#">
                                             <input type="number" value="1" />
-                                            <a type="button" href="{{url('/')}}/cart/add/{{$product->id}}" title="Add to cart"></i>Thêm vào giỏ hàng</a>
+                                            <a type="button" href="{{url('/')}}/cart/add/{{$product->id}}" title="Add to cart">Thêm vào giỏ</a>
                                         </form>
                                         <span><i class="fa fa-check"></i>
                                             @if($product->status)

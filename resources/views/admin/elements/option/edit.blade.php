@@ -35,7 +35,7 @@
                     </div>
                     <div class="form-group">
                         <label for="">Ảnh slide</label>
-                        <input type="file" class="form-control" multiple="multiple" name="slides[]">
+                        <input type="file" class="form-control" multiple="multiple" name="slides[]" style="height: 56px;">
                         <br>
                         <ul class="fix-show-images">
                             @if(isset($slides))

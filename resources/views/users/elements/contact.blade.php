@@ -66,7 +66,7 @@
                             <div class="row">
                                 <div class="col-lg-6">
                                     <div class="single-form-3">
-                                        <input name="name" type="text" placeholder="Name">
+                                        <input name="name" type="text" placeholder="Họ tên">
                                     </div>
                                 </div>
                                 <div class="col-lg-6">
@@ -76,13 +76,13 @@
                                 </div>
                                 <div class="col-lg-12">
                                     <div class="single-form-3">
-                                        <input name="subject" type="text" placeholder="Subject">
+                                        <input name="subject" type="text" placeholder="Tiêu đề">
                                     </div>
                                 </div>
                                 <div class="col-lg-12">
                                      <div class="single-form-3">
-                                        <textarea name="message" placeholder="Message"></textarea>
-                                        <button class="submit" type="submit">SEND MESSAGE</button>
+                                        <textarea name="message" placeholder="Nội dung"></textarea>
+                                        <button class="submit" type="submit">Gửi</button>
                                     </div>
                                 </div>
                             </div>
