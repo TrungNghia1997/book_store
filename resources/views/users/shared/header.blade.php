@@ -57,31 +57,8 @@
                                 <li class="{{ Request::is('/')? 'active': '' }}"><a href="{{ asset('/') }}">Trang chủ</a>
                                 </li>
 
-                                <li class="{{ Request::is('san_pham')? 'active': '' }}">
+                                <li class="{{ (Request::is('san_pham') || substr_count(Request::url(), '/danh_muc/'))? 'active': '' }}">
                                     <a href="{{ url('/san_pham') }}">Sản phẩm</a>
-                                    <ul class="hidden">
-                                        @foreach($categories as $item)
-                                            @if($item->parent == 0)
-                                                <li><a href="{{url('/')}}/danh_muc/{{$item->id}}">{{$item->name}}<i class="fa fa-angle-down"></i></a>
-                                                    <div class="mega-menu">
-                                                        @foreach($categories as $item1)
-                                                            @if($item1->parent == $item->id)
-                                                                <span>
-                                            <a href="{{url('/')}}/danh_muc/{{$item1->id}}" class="title">{{$item1->name}}</a>
-                                            @foreach($categories as $item2)
-                                                                        @if($item2->parent == $item1->id)
-                                                                            <a href="{{url('/')}}/danh_muc/{{$item1->id}}">{{$item2->name}}</a>
-                                                                        @endif
-                                                                    @endforeach
-                                        </span>
-                                                            @endif
-                                                        @endforeach
-
-                                                    </div>
-                                                </li>
-                                            @endif
-                                        @endforeach
-                                    </ul>
                                 </li>
                                 <li class="{{ Request::is('sale')? 'active': '' }}"><a href="{{url('/sale')}}">sales off</a></li>
                                 <li class="{{ Request::is('lien_he')? 'active': '' }}"><a href="{{ url('/lien_he') }}">Liên hệ</a></li>
