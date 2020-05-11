@@ -19,6 +19,7 @@ class cartController extends Controller
          $this->basket = $basket; 
     }
 
+    // add book to cart
     public function getAddCart($id){       
     	$product = Product::find($id);  
     	Cart::add([
@@ -32,6 +33,7 @@ class cartController extends Controller
     	return redirect('cart/show');    	
     }
 
+    // show list book in cart
     public function getshowCart()
     {        
     	$data['items'] = Cart::content();
@@ -40,6 +42,7 @@ class cartController extends Controller
     	return view('users.elements.cart',$data);
     }
 
+    // delete book in cart
     public function getDeleteCart($id)   
     {    	
     	if($id === 'all'){
@@ -56,6 +59,7 @@ class cartController extends Controller
     	Cart::update($request->rowId,$request->qty);
     }
 
+    // create guest buy book
     public function postshowCart(Request $request)
     {        
         if(isset(Auth::user()->id)){ 
