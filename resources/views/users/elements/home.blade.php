@@ -63,16 +63,16 @@
                 @foreach($imgs as $img)
                 <div class="single-slider pt-125 pb-130 bg-img" style="background-image:url({{$img}});">
                     <div class="container">
-                        <div class="row">
-                            <div class="col-md-12">
-                                <div class="slider-content slider-animated-1 text-center">
-                                    <h1>Huge Sale</h1>
-                                    <h2>Giảm giá 20% tất cả sản phẩm</h2>
-                                    <h3>Còn lại 5 giờ 30 phút</h3>
-                                    <a href="#">Bắt đầu ngay</a>
-                                </div>
-                            </div>
-                        </div>
+{{--                        <div class="row">--}}
+{{--                            <div class="col-md-12">--}}
+{{--                                <div class="slider-content slider-animated-1 text-center">--}}
+{{--                                    <h1>Huge Sale</h1>--}}
+{{--                                    <h2>Giảm giá 20% tất cả sản phẩm</h2>--}}
+{{--                                    <h3>Còn lại 5 giờ 30 phút</h3>--}}
+{{--                                    <a href="#">Bắt đầu ngay</a>--}}
+{{--                                </div>--}}
+{{--                            </div>--}}
+{{--                        </div>--}}
                     </div>
                 </div>
                 @endforeach

@@ -6368,6 +6368,9 @@ p.lost-password a:hover {
 .form-control {
     height: 40px;
 }
+.single-slider {
+    height: 710px;
+}
 
 
 @media only screen and (max-width: 991px) {
