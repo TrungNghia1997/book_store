@@ -50,37 +50,39 @@
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    @php
-                                        $sum =0;
-                                        @endphp
+                                    @php $sum =0; @endphp
+                                    @if(count($items) > 0)
                                         @foreach($items as $item)
-                                    <tr>
-                                        <td class="product-thumbnail"><a href="#"><img src="{{$item->options->img}}" alt="man" /></a></td>
-                                        <td class="product-name"><a href="#">{{$item->name}} </a></td>
-                                        <input type="hidden" name="nameproduct[]" value="{{$item->name}}">
-                                        <td class="product-price"><span class="amount">${{number_format($item->price,0,',','.')}}</span></td>
-                                        <td class="product-quantity">
+                                            @php
+                                                $price_sale = $item->price - ($item->options->price_sale)*($item->price)/100;
+                                            @endphp
+                                            <tr>
+                                                <td class="product-thumbnail"><a href="#"><img src="{{$item->options->img}}" alt="man" /></a></td>
+                                                <td class="product-name"><a href="#">{{$item->name}} </a></td>
+                                                <input type="hidden" name="nameproduct[]" value="{{$item->name}}">
+                                                <td class="product-price"><span class="amount">{{ number_format($price_sale) }} đ</span></td>
+                                                <td class="product-quantity">
 
-                                            <input type="number" value="{{$item->qty}}" name="qty[]" min="1" onchange="updateCart(this.value,'{{$item->rowId}}')" step="1">
-                                        </td>
-                                        <td class="product-subtotal">${{number_format($item->price,0,',','.')}}</td>
-                                        <td class="product-remove"><a href="{{url('/')}}/cart/delete/{{$item->rowId}}"><i class="fa fa-times"></i></a></td>
-                                    </tr>
-                                    @php
-                                        $sum +=  $item->options->price_sale*$item->qty;
-                                        @endphp
-                                        {{--       @php
-                                        dd($items);
-                                        @endphp --}}
-                                    </tr>
-                                    @endforeach
+                                                    <input type="number" value="{{$item->qty}}" name="qty[]" min="1" onchange="updateCart(this.value,'{{$item->rowId}}')" step="1">
+                                                </td>
+                                                <td class="product-subtotal">{{ number_format($price_sale * $item->qty) }} đ</td>
+                                                <td class="product-remove"><a href="{{url('/')}}/cart/delete/{{$item->rowId}}"><i class="fa fa-times"></i></a></td>
+                                            </tr>
+                                            @php $sum +=  $price_sale * $item->qty; @endphp
+                                            </tr>
+                                        @endforeach
+                                    @else
+                                        <tr>
+                                            <td colspan="6" class="text-center"><i>Chưa có sản phẩm nào</i></td>
+                                        </tr>
+                                    @endif
                                 </tbody>
                             </table>
                         </div>
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-lg-8 col-md-8 col-sm-6 col-xs-12">
+                    <div class="col-lg-7 col-md-7 col-sm-6 col-xs-12">
                         <div class="buttons-cart mb-30">
                             <ul>
                                 <li><a href="{{url('/cart/show')}}">Cập nhật giỏ hàng</a></li>
@@ -96,15 +98,15 @@
                             </form>
                         </div> --}}
                     </div>
-                    <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                    <div class="col-lg-5 col-md-5 col-sm-6 col-xs-12">
                         <div class="cart_totals">
                             <h2>Tổng giỏ hàng</h2>
                             <table>
                                 <tbody>
                                     <tr class="cart-subtotal">
-                                        <th>Tổng chưa giảm giá</th>
+                                        <th>Tổng chưa giảm</th>
                                         <td>
-                                            <span class="amount">${{$total}}</span>
+                                            <span class="amount">{{ str_replace('.00', '', $initial) }} đ</span>
                                         </td>
                                     </tr>
 
@@ -112,8 +114,8 @@
                                         <th>Tổng</th>
                                         <td>
                                             <strong>
-                                                <span class="amount">${{number_format($sum,0,',','.')}}
-                                                    <input type="hidden" name="sum" value="{{number_format($sum,0,',','.')}}">
+                                                <span class="amount">{{ number_format($sum,0,',','.') }} đ
+                                                    <input type="hidden" name="sum" value="{{ number_format($sum,0,',','.') }}">
                                                 </span>
                                             </strong>
                                         </td>

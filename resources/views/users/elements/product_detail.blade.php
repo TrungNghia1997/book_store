@@ -70,10 +70,12 @@
                                     <div class="product-info-price">
                                         <div class="price-final">
                                             @if($productRepository->sale > 0)
-                                                <span>${{$productRepository->price}}</span>
-                                                <span class="old-price">${{($productRepository->sale)*($productRepository->price)/100}}</span>
+                                                <li>{{number_format($productRepository->price - ($productRepository->sale)*($productRepository->price)/100)}} đ</li>
+                                                <li class="old-price">
+                                                    {{number_format($productRepository->price)}} đ
+                                                </li>
                                             @else
-                                                <span>${{$productRepository->price}}</span>
+                                                <li>{{number_format($productRepository->price)}} đ</li>
                                             @endif
                                         </div>
                                     </div>
@@ -276,7 +278,7 @@
                                         <h4><a href="{{url('/')}}/san_pham/{{$product->id}}">{{$product->name}}</a></h4>
                                         <div class="product-price">
                                             <ul>
-                                                <li>${{$product->price}}</li>
+                                                <li>{{number_format($product->price - ($product->sale)*($product->price)/100)}} đ</li>
                                             </ul>
                                         </div>
                                     </div>
@@ -326,10 +328,12 @@
                                                 <div class="product-price">
                                                     <ul>
                                                         @if($random->sale > 0)
-                                                            <li>${{$random->price}}</li>
-                                                            <li class="old-price">${{($random->sale)*($random->price)/100}}</li>
+                                                            <li>{{number_format($random->price - ($random->sale)*($random->price)/100)}} đ</li>
+                                                            <li class="old-price">
+                                                                {{number_format($random->price)}} đ
+                                                            </li>
                                                         @else
-                                                            <li>${{$random->price}}</li>
+                                                            <li>{{number_format($random->price)}} đ</li>
                                                         @endif
                                                     </ul>
                                                 </div>
@@ -361,10 +365,12 @@
                                                 <div class="product-price">
                                                     <ul>
                                                         @if($random->sale > 0)
-                                                            <li>${{$random->price}}</li>
-                                                            <li class="old-price">${{($random->sale)*($random->price)/100}}</li>
+                                                            <li>{{number_format($random->price - ($random->sale)*($random->price)/100)}} đ</li>
+                                                            <li class="old-price">
+                                                                {{number_format($random->price)}} đ
+                                                            </li>
                                                         @else
-                                                            <li>${{$random->price}}</li>
+                                                            <li>{{number_format($random->price)}} đ</li>
                                                         @endif
                                                     </ul>
                                                 </div>
@@ -431,7 +437,7 @@
                                     <div class="modal-pro-content">
                                         <h3>{{$product->name}}</h3>
                                         <div class="price">
-                                            <span>${{$product->price}}</span>
+                                            <span>{{number_format($product->price - ($product->sale)*($product->price)/100)}} đ</span>
                                         </div>
                                         <p>{{$product->short_description}} ...</p>
                                         <br>

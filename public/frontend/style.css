@@ -6371,6 +6371,9 @@ p.lost-password a:hover {
 .single-slider {
     height: 710px;
 }
+.amount {
+    text-transform: none!important;
+}
 
 
 @media only screen and (max-width: 991px) {
