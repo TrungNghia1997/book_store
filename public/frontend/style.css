@@ -6374,6 +6374,9 @@ p.lost-password a:hover {
 .amount {
     text-transform: none!important;
 }
+.shop-main-area {
+    min-height: 390px;
+}
 
 
 @media only screen and (max-width: 991px) {

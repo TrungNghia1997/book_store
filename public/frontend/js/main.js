@@ -519,6 +519,9 @@
         sidemenuDropdown();
     }
 
-
+    // Search
+    $('.header-search .fa-search').click(function () {
+        $(this).parents('form').submit();
+    });
 
 })(jQuery);
