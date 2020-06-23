@@ -61,7 +61,7 @@
                 <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
                     <div class="contact-form">
                         <h3><i class="fa fa-envelope-o"></i>Ý kiến phản hồi</h3>
-                        <form id="contact-form" action="{{url('/')}}email" method="post">
+                        <form id="contact-form" action="{{url('/email')}}" method="post">
                             @csrf
                             <div class="row">
                                 <div class="col-lg-6">
